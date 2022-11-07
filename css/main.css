@@ -16,24 +16,28 @@ body {
   background-image: url('../img/images/denim.png');
 }
 
+h5 { font-family: url('../css/night_train_382.ttf'); font-style: italic;} 
 /* main header rules */
 
 header {
-    background-color: #ed1b24;
+    background-color: #f5e6d1;
     position: sticky;
     top: 0;
     text-align: center;
 }
 
-#main-logo { width: 300px; padding: 10px 0; }
+#main-logo {
+    object-fit: contain; padding: 20; scroll-behavior: smooth;
+}
+
 
 /* main rules here */
 #character_nav {
     text-align: center;
-    background-color: #710000;
+    background-color: #a04e6e;
 
-    background-image: url('../img/images/characters_art_mas_mob_01.jpeg');
-    
+    background-image: url('../img/banners/bg_banner.jpg');
+
     background-repeat: no-repeat;
     background-size: cover;
 
@@ -44,7 +48,7 @@ header {
 
 .characters li { 
     display: inline-block; 
-    height: 120px;
+    height: 250px;
     margin: 10px 8px;
 
     background-color: black;
@@ -59,30 +63,96 @@ header {
 }
 
 /* sprite */
-.red_bumper{
+.bumper{
     width: 100%;
     height: 6px;
-    background-color: #ed1b24;
+    background-color: #841641;
 }
 
-.sprite {
-    width: 150px;
-    height: 150px;
+.sprite1 {
+    width: 180px;
+    height: 200px;
 
-    background-image: url('../img/images/marvelSprites.jpg');
+    background-image: url('../img/sprites/ladybug.jpg');
 }
+.sprite2 {
+    width: 180px;
+    height: 200px;
 
-#carol{background-position: -150px 0;}
-#clint{background-position: -300px 0;}
-#thor{background-position: -450px 0;}
-#hulk{background-position: -600px 0;}
-#widow{background-position: -750px 0;}
+    background-image: url('../img/sprites/prince.jpg');
+}
+.sprite3 {
+    width: 180px;
+    height: 200px;
+
+    background-image: url('../img/sprites/tangerine.jpg');
+}
+.sprite3 {
+    width: 180px;
+    height: 200px;
+
+    background-image: url('../img/sprites/tangerine.jpg');
+}
+.sprite4 {
+    width: 180px;
+    height: 200px;
+
+    background-image: url('../img/sprites/lemon.jpg');
+}
+.sprite5 {
+    width: 180px;
+    height: 200px;
+
+    background-image: url('../img/sprites/kimura.jpg');
+}
+.sprite6 {
+    width: 180px;
+    height: 200px;
+
+    background-image: url('../img/sprites/the_elder.jpg');
+}
+.sprite7 {
+    width: 180px;
+    height: 200px;
+
+    background-image: url('../img/sprites/the_son.jpg');
+}
+.sprite8 {
+    width: 180px;
+    height: 200px;
+
+    background-image: url('../img/sprites/white_death.jpg');
+}
+.sprite9 {
+    width: 180px;
+    height: 200px;
+
+    background-image: url('../img/sprites/the_hornet.jpg');
+}
+.sprite10 {
+    width: 180px;
+    height: 200px;
+
+    background-image: url('../img/sprites/wolf.jpg');
+}
+#ladybug{ background-position: -180px 0;}
+#prince{ background-position: -180px 0;}
+#tangerine{ background-position: -180px 0;}
+#lemon{ background-position: -180px 0;}
+#kimaru{ background-position: -180px 0;}
+#the-elder{ background-position: -180px 0;}
+#the-son{ background-position: -180px 0;}
+#white-death{ background-position: -180px 0;}
+#the-hornet{ background-position: -180px 0;}
+#wolf{ background-position: -180px 0;}
+
 
 .sprite:hover { background-position-y: -150px !important;}
 
 article {padding: 20px;}
 
 article h3 {
+    font-display: url('../css/night_train_382.ttf');
     font-size: 2em;
     text-align: center;
     margin-bottom: 14px;
@@ -113,29 +183,52 @@ footer {
     background-color: rgb(40, 37, 37);
 }
 
-.lightbox {
-    width: 100vw; /*view*/
-    height: 100vh;
+.lightbox { 
+    width: 100vw; /* vw = viewport width => screen width */
+    height: 100vh; /* vh = viewport height => screen height */
 
     position: absolute;
     top: 0;
+    left: 0;
     bottom: 0;
 
     background-color: rgba(0, 0, 0, 0.85);
+    background-image: url('../img/light_box/ladybug_lb.svg');
+    background-repeat: no-repeat;
 
-    display: none;
+    background-size: 100%; /* 55% of the viewport height */
+    background-position: fill;
+
+    z-index: 5000;
+
 }
+.lightbox_close {
+    position: relative;
+    top: 20px;
+    left: 95%;
 
+    color: white;
+    font-size: 3em;
+
+    text-decoration: none;
+
+    font-weight: bolder;
+}
+.lightbox_close:hover { opacity: 0.5; color: red; }
+
+/* turn the lightbox on using the :target pseudo selector */
+.lightbox:target { display: block; }
+.lightbox:target {user-select: auto;}
 .lightbox article {
     width: 55%;
     margin-left: 40%;
     padding-top: 50px;
 }
 
-.lb_text, .lb_heading { text-align: left;}
+.lb_text, .lb_heading { text-align: right;}
 
 .lb_text {
     line-height: 1.6 !important;
-    margin-left: 0;
+    margin-right: 0;
     padding-top: 2em;
 }
