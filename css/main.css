@@ -59,15 +59,26 @@ header {
 }
 
 .characters li h5 { 
+    position: relative;
+    color: white;
     padding: 12px 8px;
+
+    z-index: 500;
 }
+
+.characters li a { text-decoration: none;}
 
 /* sprite */
 .bumper{
-    width: 100%;
+    width: 180px;
     height: 6px;
     background-color: #841641;
+    
+    transition: height 0.5s ease;
+
+    position: absolute;
 }
+.characters li:hover .bumper { height: 50px; width: 180px; }
 
 .sprite1 {
     width: 180px;
@@ -193,13 +204,15 @@ footer {
     bottom: 0;
 
     background-color: rgba(0, 0, 0, 0.85);
-    background-image: url('../img/light_box/ladybug_lb.svg');
+    background-image: url('../img/light_box/ladybug_lb.png');
     background-repeat: no-repeat;
 
     background-size: 100%; /* 55% of the viewport height */
     background-position: fill;
 
     z-index: 5000;
+
+    display: none;
 
 }
 .lightbox_close {
@@ -214,10 +227,9 @@ footer {
 
     font-weight: bolder;
 }
-.lightbox_close:hover { opacity: 0.5; color: red; }
+.lightbox_close:hover { opacity: 0.5; color: #841641;}
 
-/* turn the lightbox on using the :target pseudo selector */
-.lightbox:target { display: block; }
+
 .lightbox:target {user-select: auto;}
 .lightbox article {
     width: 55%;
@@ -232,3 +244,5 @@ footer {
     margin-right: 0;
     padding-top: 2em;
 }
+/* turn the lightbox on using the :target pseudo selector */
+.lightbox:target { display: block;}
