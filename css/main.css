@@ -43,13 +43,13 @@ header {
 }
 
 #main-logo {
-    width: 1000px;
+    width: 780px;
     object-fit: contain; padding: 20; scroll-behavior: smooth;
-    grid-column: 4/10;
+    grid-column: 3/8;
 }
 
 #hero-banner {
-    grid-column: 4/10;
+    grid-column: 3/8;
 }
 
 /* main rules here */
