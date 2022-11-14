@@ -7,16 +7,32 @@
 
 .hidden { display: none; }
 
+.grid {
+    display: grid;
+
+    padding-left: 41px;
+    padding-right: 41px;
+
+    grid-template-columns: repeat(12, 116px);
+
+    grid-column-gap: 50px;
+}
+
 html, body { height: 100% }
 
 body { 
   font-family: sans-serif;
-  background-color: black;
+  background-color: #f5e6d1;
   color: white;
   background-image: url('../img/images/denim.png');
 }
 
-h5 { font-family: url('../css/night_train_382.ttf'); font-style: italic;} 
+h1 {
+    font-size: 70px;
+} 
+h2 { font-size: 50px;}
+h3 { font-size: 30px;}
+p { font-size: 20px;}
 /* main header rules */
 
 header {
@@ -27,14 +43,19 @@ header {
 }
 
 #main-logo {
+    width: 1000px;
     object-fit: contain; padding: 20; scroll-behavior: smooth;
+    grid-column: 4/10;
 }
 
+#hero-banner {
+    grid-column: 4/10;
+}
 
 /* main rules here */
 #character_nav {
     text-align: center;
-    background-color: #a04e6e;
+    background-color: #2f0e1b;
 
     background-image: url('../img/banners/bg_banner.jpg');
 
@@ -44,12 +65,14 @@ header {
     background-blend-mode: multiply;
 }
 
-.characters { list-style-type: multiply; }
+.characters {
+     list-style-type: multiply; 
+}
 
 .characters li { 
     display: inline-block; 
-    height: 250px;
-    margin: 10px 8px;
+    height: 350px;
+    margin: 30px 15px;
 
     background-color: black;
 
@@ -62,15 +85,17 @@ header {
     position: relative;
     color: white;
     padding: 12px 8px;
-
+    font-style: italic;
     z-index: 500;
 }
 
-.characters li a { text-decoration: none;}
+.characters li a {
+     text-decoration: none;
+}
 
 /* sprite */
 .bumper{
-    width: 180px;
+    width: 260px;
     height: 6px;
     background-color: #841641;
     
@@ -78,87 +103,91 @@ header {
 
     position: absolute;
 }
-.characters li:hover .bumper { height: 50px; width: 180px; }
+.characters li:hover .bumper { 
+    height: 50px; width: 260px; 
+}
 
 .sprite1 {
-    width: 180px;
-    height: 200px;
+    width: 260px;
+    height: 300px;
 
-    background-image: url('../img/sprites/ladybug.jpg');
+    background-image: url('../img/sprites/ladybug02.jpg');
 }
 .sprite2 {
-    width: 180px;
-    height: 200px;
+    width: 260px;
+    height: 300px;
 
-    background-image: url('../img/sprites/prince.jpg');
+    background-image: url('../img/sprites/prince02.jpg');
 }
 .sprite3 {
-    width: 180px;
-    height: 200px;
+    width: 260px;
+    height: 300px;
 
-    background-image: url('../img/sprites/tangerine.jpg');
+    background-image: url('../img/sprites/tangerine02.jpg');
 }
 .sprite3 {
-    width: 180px;
-    height: 200px;
+    width: 260px;
+    height: 300px;
 
-    background-image: url('../img/sprites/tangerine.jpg');
+    background-image: url('../img/sprites/tangerine02.jpg');
 }
 .sprite4 {
-    width: 180px;
-    height: 200px;
+    width: 260px;
+    height: 300px;
 
-    background-image: url('../img/sprites/lemon.jpg');
+    background-image: url('../img/sprites/lemon02.jpg');
 }
 .sprite5 {
-    width: 180px;
-    height: 200px;
+    width: 260px;
+    height: 300px;
 
-    background-image: url('../img/sprites/kimura.jpg');
+    background-image: url('../img/sprites/kimura02.jpg');
 }
 .sprite6 {
-    width: 180px;
-    height: 200px;
+    width: 260px;
+    height: 300px;
 
-    background-image: url('../img/sprites/the_elder.jpg');
+    background-image: url('../img/sprites/the_elder02.jpg');
 }
 .sprite7 {
-    width: 180px;
-    height: 200px;
+    width: 260px;
+    height: 300px;
 
-    background-image: url('../img/sprites/the_son.jpg');
+    background-image: url('../img/sprites/the_son02.jpg');
 }
 .sprite8 {
-    width: 180px;
-    height: 200px;
+    width: 260px;
+    height: 300px;
 
-    background-image: url('../img/sprites/white_death.jpg');
+    background-image: url('../img/sprites/white_death02.jpg');
 }
 .sprite9 {
-    width: 180px;
-    height: 200px;
+    width: 260px;
+    height: 300px;
 
-    background-image: url('../img/sprites/the_hornet.jpg');
+    background-image: url('../img/sprites/the_hornet02.jpg');
 }
 .sprite10 {
-    width: 180px;
-    height: 200px;
+    width: 260px;
+    height: 300px;
 
-    background-image: url('../img/sprites/wolf.jpg');
+    background-image: url('../img/sprites/wolf02.jpg');
 }
-#ladybug{ background-position: -180px 0;}
-#prince{ background-position: -180px 0;}
-#tangerine{ background-position: -180px 0;}
-#lemon{ background-position: -180px 0;}
-#kimaru{ background-position: -180px 0;}
-#the-elder{ background-position: -180px 0;}
-#the-son{ background-position: -180px 0;}
-#white-death{ background-position: -180px 0;}
-#the-hornet{ background-position: -180px 0;}
-#wolf{ background-position: -180px 0;}
+#ladybug{ background-position: -260px 0;}
+#prince{ background-position: -260px 0;}
+#tangerine{ background-position: -260px 0;}
+#lemon{ background-position: -260px 0;}
+#kimaru{ background-position: -260px 0;}
+#the-elder{ background-position: -260px 0;}
+#the-son{ background-position: -260px 0;}
+#white-death{ background-position: -260px 0;}
+#the-hornet{ background-position: -260px 0;}
+#wolf{ background-position: -260px 0;}
 
 
-.sprite:hover { background-position-y: -150px !important;}
+.sprite:hover {
+     background-position-y: -260px !important;
+    }
 
 article {padding: 20px;}
 
@@ -179,6 +208,11 @@ article p {
     margin: 0 auto;
 }
 
+#container {
+    background: #2f0e1b 1900px 110px;
+    
+    }
+
 /* footer rules here */
 footer {
     color: white;
@@ -191,7 +225,7 @@ footer {
     top: 100%;
     
     height: 80px;
-    background-color: rgb(40, 37, 37);
+    background-color: black;
 }
 
 .lightbox { 
@@ -204,8 +238,6 @@ footer {
     bottom: 0;
 
     background-color: rgba(0, 0, 0, 0.85);
-    background-image: url('../img/light_box/ladybug_lb.png');
-    background-repeat: no-repeat;
 
     background-size: 100%; /* 55% of the viewport height */
     background-position: fill;
@@ -246,3 +278,48 @@ footer {
 }
 /* turn the lightbox on using the :target pseudo selector */
 .lightbox:target { display: block;}
+
+#lightbox-ladybug {
+    background-image: url('../img/light_box/ladybug_lb.png');
+    background-repeat: no-repeat;
+}
+#lightbox-prince {
+    background-image: url(../img/light_box/prince_lb_02.png);
+    background-repeat: no-repeat;
+}
+#lightbox-tang {
+    background-image: url(../img/light_box/tangerine_lb.jpg);
+    background-repeat: no-repeat;
+}
+#lightbox-lemon {
+    background-image: url(../img/light_box/lemon_lb.png);
+    background-repeat: no-repeat;
+}
+#lightbox-kimaru {
+    background-image: url(../assets/lightbox/kimaru_lb.jpg);
+    background-repeat: no-repeat;
+}
+#lightbox-elder {
+    background-image: url(../img/light_box/elder_lb_02.png);
+    background-repeat: no-repeat;
+}
+#lightbox-son {
+    background-image: url(../img/light_box/son_lb_02.png);
+    background-repeat: no-repeat;
+}
+#lightbox-white {
+    background-image: url(../img/light_box/white_death_lb.png);
+    background-repeat: no-repeat;
+}
+#lightbox-hornet {
+    background-image: url(../img/light_box/hornet_lb_02.png);
+    background-repeat: no-repeat;
+}
+#lightbox-wolf {
+    background-image: url(../img/light_box/wolf_lb.png);
+    background-repeat: no-repeat;
+}
+
+.lightbox article h3 {
+    font-style: italic;
+}
