@@ -81,11 +81,12 @@ header {
     cursor: pointer;
 }
 
-.characters li h5 { 
+.characters li h4 { 
     position: relative;
     color: white;
     padding: 12px 8px;
     font-style: italic;
+    font-size: 18px;
     z-index: 500;
 }
 
@@ -219,6 +220,8 @@ footer {
     padding: 20px 0;
     text-align: center;
 }
+
+footer p { font-size: 12px;}
     
 .sticky_footer {
     position: sticky;
